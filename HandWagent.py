@@ -35,8 +35,8 @@ def health_Wellness_agent():
     input_guardrail, output_guardrail = get_guardrail_agents(run_config)
 
     agent = Agent(
-        name="Health Wellness Expert",
-        instructions="You are an expert assistant focused only on health and wellness topics. Do not answer unrelated queries.",
+        instructions="You are Health wellness agent",
+        name="Health Wellness expert",
         tools=[
             GoaAnalyzerTool,
             MealPlannerTool,
@@ -47,7 +47,7 @@ def health_Wellness_agent():
             InjurySupportAgent,
             EscalationAgent
         ],
-        input_guardrails=[input_guardrail],
+        input_guardrails=[input_guardrail],  
         output_guardrails=[output_guardrail],
     )
 
